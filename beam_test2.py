@@ -1,0 +1,27 @@
+from BeamClass import *
+from sympy import *
+newBeam=Beam(10.5,'cantilever','circle',70*(10**9),0,0,5)
+newBeam.getDiscreteForce(2.5 ,8.5)
+newBeam.getDiscreteForce(4 ,10)
+newBeam.getDiscreteForce(6 ,10)
+newBeam.getDiscreteForce(8,10)
+
+newBeam.getContinuousForce(3,6,'10')
+newBeam.getContinuousForce(3,6,'-5.125x')
+newBeam.getContinuousForce(3,6,'x^2')
+
+newBeam.calcShearForceEq()
+newBeam.calcBendingMomentEq()
+newBeam.calcSupportReac()
+newBeam.calcShearForceEq()
+newBeam.calcBendingMomentEq()
+newBeam.calcDeflection()
+newBeam.maxDeflection()
+newBeam.maxBendingStress()
+newBeam.printLoadEquation()
+newBeam.printShearForceEquation()
+newBeam.printBendingMomentEquation()
+newBeam.plotLoadEq()
+newBeam.plotShearEq()
+newBeam.plotBendingMomentEq()
+newBeam.plotDeflection()
